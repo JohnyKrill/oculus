@@ -566,21 +566,6 @@ a[class=button] {
   display: flex;
   gap: 0.625rem;
 }
-@media (min-width: 20em) {
-  .tabs-features {
-    min-height: 50rem;
-  }
-}
-@media (min-width: 36em) {
-  .tabs-features {
-    min-height: 28.75rem;
-  }
-}
-@media (min-width: 47.99875em) {
-  .tabs-features {
-    min-height: 19.375rem;
-  }
-}
 @media (max-width: 61.99875em) {
   .tabs-features {
     flex-direction: column;
@@ -628,52 +613,75 @@ a[class=button] {
   }
 }
 .tabs-features__image-ibg {
-  flex-basis: 70%;
-  min-width: 292px;
-  min-height: 235px;
-  padding-block-end: 25%;
+  width: 100%;
+  padding-block-end: 30%;
 }
 @media (max-width: 47.99875em) {
   .tabs-features__image-ibg {
     margin-block-end: 1.25rem;
   }
 }
+@media (max-width: 36em) {
+  .tabs-features__image-ibg {
+    padding-block-end: 50%;
+  }
+}
 .tabs-features__content {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 .tabs-features__content-item {
-  position: absolute;
   opacity: 0;
-  transition: opacity 0.3s ease 0s;
-  gap: 4%;
+  height: 0;
+  scale: 0;
+  transition: opacity 0.9s ease 0s, scale 0.2s ease 0s;
 }
 @media (min-width: 47.99875em) {
   .tabs-features__content-item {
     display: flex;
   }
 }
+@media (min-width: 71.875em) {
+  .tabs-features__content-item {
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 48em) and (max-width: 71.875em) {
+  .tabs-features__content-item {
+    gap: clamp( 0.3125rem , -4.0854057592rem  +  9.1623036649vw , 2.5rem );
+  }
+}
+@media (max-width: 48em) {
+  .tabs-features__content-item {
+    gap: 0.3125rem;
+  }
+}
 .tabs-features__content-item_active {
   opacity: 1;
+  scale: 1;
+  height: auto;
 }
 
 @media (max-width: 47.99875em) {
   .box-content {
-    flex: 0 0 320px;
+    flex-basis: 50%;
   }
 }
-.box-content__wrap {
-  flex-basis: 20%;
+@media (min-width: 47.99875em) {
+  .box-content__wrap {
+    max-width: 17.5rem;
+  }
 }
 @media (max-width: 47.99875em) {
   .box-content__wrap {
     display: flex;
-    justify-content: space-between;
+    gap: 0.625rem;
   }
 }
 @media (max-width: 36em) {
   .box-content__wrap {
-    display: block;
+    flex-direction: column;
   }
 }
 .box-content__title {
@@ -695,26 +703,15 @@ a[class=button] {
   padding-block: 0.5625rem;
   padding-inline: 0.625rem;
 }
-@media (min-width: 36em) {
+@media (max-width: 47.99875em) {
   .box-content__video {
-    width: 50%;
-  }
-}
-@media (max-width: 36em) {
-  .box-content__video {
-    width: 100%;
-    height: 10.625rem;
-  }
-}
-@media (min-width: 47.99875em) {
-  .box-content__video {
-    width: 17.5rem;
-    height: 9.375rem;
+    flex-basis: 50%;
   }
 }
 .box-content__btn {
   margin-block-end: 0.5625rem;
   margin-inline-start: 1.375rem;
+  padding-block-start: 3.75rem;
 }
 .box-content__play-text {
   font-size: 0.8125rem;
