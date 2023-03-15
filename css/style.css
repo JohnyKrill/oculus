@@ -574,18 +574,12 @@ a[class=button] {
 .tabs-features__btns {
   flex: 0 0 19%;
 }
-@media (max-width: 61.99875em) {
+@media (min-width: 36em) and (max-width: 61.99875em) {
   .tabs-features__btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3%;
-  }
-}
-@media (max-width: 36em) {
-  .tabs-features__btns {
-    display: block;
-    text-align: center;
   }
 }
 @media (min-width: 61.99875em) {
